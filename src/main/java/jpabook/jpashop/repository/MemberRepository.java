@@ -9,8 +9,12 @@ import java.util.List;
 
 @Repository
 public class MemberRepository {
-    @PersistenceContext
-    private EntityManager em;
+    @PersistenceContext //springboot부터는 @Autowired로 가능
+    private final EntityManager em;
+
+    public MemberRepository(EntityManager em) {
+        this.em = em;
+    }
 
     public void save(Member member) {
         em.persist(member);
