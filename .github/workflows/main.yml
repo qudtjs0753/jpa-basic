@@ -7,7 +7,11 @@
 
 name: PUSH test
  
-on: [push]
+on: 
+ push:
+  branches:    
+   - main
+   - 'feature/**'
  
 jobs:
   test:
