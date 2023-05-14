@@ -14,3 +14,11 @@ spring:
     url: jdbc:h2:mem:test # In-Memory mode
     username: sa
     password:
+
+  jpa:
+    hibernate:
+      ddlAuto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
